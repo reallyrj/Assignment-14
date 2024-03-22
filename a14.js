@@ -1,8 +1,8 @@
-const express=require("express");
-const app=express();
+const express = require("express");
+const app = express();
 app.use(express.static("public"));
 
-app.get("/",(req,res)=>{
+app.get('/', (req, res) => {
     res.sendFile(__dirname + "/index.html");
 });
 
@@ -235,11 +235,62 @@ app.get("/api/crafts",(req,res)=>{
         suppplies: [
             "Multicolored straws",
         ]};
+       crafts[20]= {
+            name: "Sunny String",
+            image: "sun-string.jpg",
+            description: "Let's practice our fine motor skills while we weave the string into a fun sun.",
+            supplies: [
+                "Yellow String",
+                "Paper Plate",
+                "Yellow construction paper",
+                "Yellow and Orange beads"
+            ]};
+        crafts[21]={
+            name: "Tissue Ballerinas",
+            image: "tisue-dancer.jpeg",
+            description: "These beautiful dancers will look great on display",
+            supplies: [
+                "Pipe cleaner",
+                "Tissue Paper",
+                "Elastics"
+            ]
+        };
+        crafts[22]=
+        {
+            name: "Toilet Paper Roll Animals",
+            image: "toilet-paper-animals.jpeg",
+            description: "These beautiful dancers will look great on display",
+            supplies: [
+                "Toilet Paper Rolls",
+                "Construction Paper",
+                "Googly Eyes"
+            ]
+        };
+        crafts[23]=
+        {
+            name: "Toilet Paper Butterfly",
+            image: "toilet-paper-butterfly.jpg",
+            description: "Such a sweat little flyer",
+            supplies: [
+                "Toilet Paper Rolls",
+                "Construction Paper",
+                "Googly Eyes",
+                "Buttons"
+            ]
+        };
+        crafts[24]={
+            name: "Valentines Jar",
+            image: "valentines-jar.webp",
+            description: "So much hearts all in one",
+            supplies: [
+                "Clay",
+                "Glitter"
+            ]
+        };
         console.log(crafts);
         res.json(crafts);
 });
 
-app.listen(3001,()=>{
+app.listen(3000, () => {
     console.log("listening");
-});
-
+})
