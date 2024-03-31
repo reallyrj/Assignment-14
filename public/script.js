@@ -94,10 +94,6 @@ const imagebutton = document.getElementById("imagebutton");
 const imageInput = document.createElement("input");
 imageInput.type = "file";
 
-imagebutton.onclick = function () {
-    // Trigger the file picker dialog
-    imageInput.click();
-};
 // Event listener for when an image is selected
 imageInput.onchange = function (event) {
     const file = event.target.files[0]; // Get the selected file
