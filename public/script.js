@@ -98,7 +98,6 @@ imagebutton.onclick = function () {
     // Trigger the file picker dialog
     imageInput.click();
 };
-
 // Event listener for when an image is selected
 imageInput.onchange = function (event) {
     const file = event.target.files[0]; // Get the selected file
@@ -115,8 +114,13 @@ imageInput.onchange = function (event) {
         existingImages.forEach(img => img.remove());
         
         inputsection.appendChild(inputimg); // Append the inputimg to the modal2-content
+        
+        // Update the file input element with the selected file
+        imageInput.files = event.target.files;
     }
 };
+
+
 // Add Supply button click event
 const addSupplyButton = document.getElementById("supplybutton");
 
